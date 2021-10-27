@@ -20,3 +20,13 @@ export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx
 export AWS_DEFAULT_REGION=us-east-1
 ```
+### 3. Clone repository and start the Terraform script
+```
+https://github.com/Kasper886/WaveProject.git
+cd HA-WebSite/terraform
+terraform init
+rettafom plan
+terraform apply -auto-approve
+```
+(You need terraform installed)
+### 4. As done, go to AWS account -> VPC -> route tables and de-associate subnets from WaveNGW-RTBL
