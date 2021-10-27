@@ -1,0 +1,3 @@
+---
+# vars file for sample-apache
+docker_compose_version: "1.27.4"
