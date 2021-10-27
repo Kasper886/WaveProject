@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  apache:
+    image: httpd:latest
+    volumes: 
+      - /home/ubuntu/www/html:/usr/local/apache2/htdocs/
+    ports:
+      - "80:80"
