@@ -1,1 +1,2 @@
 # Highly Available Web Site
+This repository allows to create a highly available web site. By running this script you will receive 2 private subnets in 2 availability zones - A and B and one public subnet in availability zone A. 2 web servers works in AZ A and B and controlled by AWS application load balancer (ALB). The cluster can be reached through ALB dns name that you can see in the end of the process in your concole.
