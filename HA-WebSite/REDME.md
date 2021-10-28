@@ -22,7 +22,7 @@ export AWS_DEFAULT_REGION=us-east-1
 ```
 ### 3. Clone repository and start the Terraform script
 ```
-https://github.com/Kasper886/WaveProject.git
+git clone https://github.com/Kasper886/WaveProject.git
 cd HA-WebSite/terraform
 terraform init
 rettafom plan
