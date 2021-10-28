@@ -44,4 +44,4 @@ terraform apply -auto-approve
 terraform destroy -auto-approve
 ```
 ## Demo
-(https://github.com/Kasper886/WaveProject/blob/master/HA-WebSite/files/DemoVideo.mp4)
+[![Watch the video](https://github.com/Kasper886/WaveProject/blob/master/HA-WebSite/files/demo.png)](https://github.com/Kasper886/WaveProject/blob/master/HA-WebSite/files/DemoVideo.mp4)
