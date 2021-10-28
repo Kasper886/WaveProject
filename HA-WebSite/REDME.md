@@ -32,7 +32,7 @@ cd WaveProject/HA-WebSite/terraform/
 terraform init
 ```
 ```
-rettafom plan
+terraform plan
 ```
 ```
 terraform apply -auto-approve
