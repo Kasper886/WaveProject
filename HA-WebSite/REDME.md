@@ -44,4 +44,4 @@ terraform apply -auto-approve
 terraform destroy -auto-approve
 ```
 ## Demo
-[![Watch the video](https://i.ytimg.com/vi/00e1vTPujxk/sddefault.jpg)](https://youtu.be/00e1vTPujxk)
+<iframe width="854" height="480" src="https://youtu.be/00e1vTPujxk" frameborder="0" allowfullscreen></iframe>
