@@ -39,3 +39,7 @@ terraform apply -auto-approve
 ```
 (You need terraform installed)
 ### 4. As done, go to AWS account -> VPC -> route tables and de-associate subnets from WaveNGW-RTBL
+### 5. When done delete your resources
+```
+terraform destroy -auto-approve
+```
