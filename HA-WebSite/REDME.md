@@ -10,15 +10,16 @@ Below you can see the diagram of the system.
 For this project Terraform, Ansible and AWS bundle was used. IaaC creates the environment, that consists of 2 web servers in 2 AZ and bastion host with Ansible. The process is automated, because AWS EC2 plugin to create Ansible inventory file is used. So you don't need to start the Ansible playbook then.
 
 ## How to do
-### 1. Generate 2 ssh key pairs with names private-node and public-node
-```
-ssh-keygen
-```
-### 2. Export AWS credentials and your default region (I worked in us-east-1 region)
+
+### 1. Export AWS credentials and your default region (I worked in us-east-1 region)
 ```
 export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
 export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx
 export AWS_DEFAULT_REGION=us-east-1
+```
+### 2. Generate 2 ssh key pairs with names private-node and public-node
+```
+ssh-keygen
 ```
 ### 3. Clone repository and start the Terraform script
 ```
