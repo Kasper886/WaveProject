@@ -24,7 +24,7 @@ ssh-keygen
 ### 3. Clone repository and start the Terraform script
 ```
 git clone https://github.com/Kasper886/WaveProject.git
-cd HA-WebSite/terraform
+cd WaveProject/HA-WebSite/terraform/
 terraform init
 rettafom plan
 terraform apply -auto-approve
