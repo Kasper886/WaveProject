@@ -48,7 +48,7 @@ If you want to scale your node group, you need:
 3. [KubeCTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
 Then run the following command to "login" to your EKS cluster:
-aws eks update-kubeconfig --name <clusterName> --region <AWS region>
+aws eks update-kubeconfig --name clusterName --region AWS region
 
   Where clusterName is name of your cluster (wave-eks), AWS region - region of AWS (us-east-1)
 ```
@@ -56,7 +56,7 @@ aws eks update-kubeconfig --name wave-eks --region us-east-1
 ```
 
 Then make scaling:
-eksctl scale nodegroup --cluster=<clusterName> --nodes=4 --name=<nodegroupName>
+eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
 
   Where clusterName is name of your cluster (wave-eks), nodegroupName - name of your group name (nodes_general)
 ```
