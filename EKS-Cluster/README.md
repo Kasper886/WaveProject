@@ -17,3 +17,44 @@ Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform 
 1. Worker nodes in private subnets
 2. Scaling configuration - desired size = 2, max size = 10, min_size = 1
 3. Instances type - spot instances t3.small
+
+## How to do
+You should have terraform on board and AWS credentials to get access to your AWS account.
+### 1. Export AWS credentials and your default region (I worked in us-east-1 region)
+```
+export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
+export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx
+export AWS_DEFAULT_REGION=us-east-1
+```
+### 2. Clone repository and start the Terraform script
+```
+git clone https://github.com/Kasper886/WaveProject.git
+```
+```
+cd WaveProject/EKS-cluster/
+```
+```
+terraform init
+```
+```
+terraform plan
+```
+```
+terraform apply -auto-approve
+```
+If you want to scale your node group, you need:
+1. [AWS CLI]https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+2. [EKSCTL]https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
+3. [KubeCTL]https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+Then run the following command to "login" to your EKS cluster
+```
+aws eks update-kubeconfig --name <clusterName> --region <AWS region>
+```
+Where clusterName - name of your cluster (wave-eks), AWS region - region of AWS (us-east-1)
+
+Then make scaling:
+```
+eksctl scale nodegroup --cluster=<clusterName> --nodes=4 --name=<nodegroupName>
+```
+Where clusterName is name of your cluster (wave-eks), codegroupName - name of your group name (nodes_general)
