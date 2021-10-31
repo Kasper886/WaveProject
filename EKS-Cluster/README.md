@@ -43,9 +43,9 @@ terraform plan
 terraform apply -auto-approve
 ```
 If you want to scale your node group, you need:
-1. [AWS CLI]https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
-2. [EKSCTL]https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
-3. [KubeCTL]https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+2. [EKSCTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+3. [KubeCTL](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
 Then run the following command to "login" to your EKS cluster
 ```
