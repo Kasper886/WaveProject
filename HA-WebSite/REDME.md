@@ -4,7 +4,7 @@ This repository allows to create a highly available web site. By running this sc
 
 Below you can see the diagram of the system.
 
-![Image alt](https://github.com/Kasper886/WaveProject/blob/master/HA-WebSite/files/WebSite.png?raw=true)
+![Image alt](https://github.com/Kasper886/WaveProject/blob/master/HA-WebSite/files/WebSiteDiagram.png?raw=true)
 
 ## Principle of operation
 For this project Terraform, Ansible and AWS bundle was used. IaaC creates the environment, that consists of 2 web servers in 2 AZ and bastion host with Ansible. The process is automated, because AWS EC2 plugin to create Ansible inventory file is used. So you don't need to start the Ansible playbook then.
