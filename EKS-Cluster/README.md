@@ -64,3 +64,5 @@ eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
 ```
 eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
 ```
+
+## Demo
