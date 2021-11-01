@@ -66,3 +66,6 @@ eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
 ```
 
 ## Demo
+
+https://user-images.githubusercontent.com/51818001/139727318-5aeb08dd-3e20-45d3-a59d-a0e4a39e98ac.mp4
+
