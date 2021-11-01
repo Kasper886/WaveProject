@@ -60,7 +60,7 @@ Then make scaling:
 
 eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
 
-  Where clusterName is name of your cluster (wave-eks), nodegroupName - name of your group name (nodes_general)
+  Where clusterName is name of your cluster (wave-eks), nodegroupName - name of your group name (nodes-01)
 ```
-eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes_general
+eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
 ```
