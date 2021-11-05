@@ -14,7 +14,7 @@ resource "aws_iam_role_policy_attachment" "cluster_policy" {
 
 # EKS cluster 
 resource "aws_eks_cluster" "eks" {
-  name     = "wave-eks"                        
+  name     = "eks"                        
   role_arn = aws_iam_role.eks_cluster.arn 
   version  = "1.21"                       
   vpc_config {
