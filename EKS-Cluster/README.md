@@ -51,9 +51,9 @@ Then run the following command to "login" to your EKS cluster:
 
 aws eks update-kubeconfig --name clusterName --region AWS region
 
-  Where clusterName is name of your cluster (wave-eks), AWS region - region of AWS (us-east-1)
+  Where clusterName is name of your cluster (eks), AWS region - region of AWS (us-east-1)
 ```
-aws eks update-kubeconfig --name wave-eks --region us-east-1
+aws eks update-kubeconfig --name eks --region us-east-1
 ```
 
 Then make scaling:
