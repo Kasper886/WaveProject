@@ -41,7 +41,7 @@ git clone https://github.com/Kasper886/WaveProject.git
 ```
 cd WaveProject/EKS-Cluster/
 ```
-Install Terraform if you don't have it
+Install Terraform if you don't have it.<br/>
 If your user is not a root user, ask your admin to add user to sudoers
 ```
 sudo visudo
