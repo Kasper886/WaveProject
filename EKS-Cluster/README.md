@@ -67,7 +67,7 @@ bash/eksctl.sh
 bash/kubectl.sh
 ```
 
-### 2. So, you can laounch EKS cluster now:
+### 2. So, you can launch EKS cluster now:
 Export AWS credentials and your default region (I worked in us-east-1 region)
 ```
 export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
