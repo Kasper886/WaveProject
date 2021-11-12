@@ -104,7 +104,7 @@ eksctl scale nodegroup --cluster=eks --nodes=4 --name=nodes-01
 ```
 
 ### 4. Finally delete EKS cluster
-If you have done and don't want to deploy the application - delete EKS cluster. If not, go to [the next section](https://github.com/Kasper886/WaveProject/tree/master/App)
+If you have done and don't want to deploy the application, delete EKS cluster. If not, go to [the next section](https://github.com/Kasper886/WaveProject/tree/master/App)
 ```
 terraform destroy -auto-approve
 ```
