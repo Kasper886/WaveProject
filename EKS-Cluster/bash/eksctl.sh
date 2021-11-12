@@ -1,9 +1,10 @@
-#-----------------------#
-# Install EKS CTL       #
-#                       #
-# Created: 08.11.2021   # 
-# Owner: Alex Largman   # 
-#-----------------------#
+#-------------------------#
+# Install EKS CTL         #
+#                         #
+# Created: 08.11.2021     # 
+# Owner: Alex Largman     # 
+# Email: alex@largman.pro #
+#-------------------------#
 
 #!/bin/bash
 #Install EKS CTL
