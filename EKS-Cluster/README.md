@@ -28,13 +28,8 @@ Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform 
 
 ## How to do
 You should have terraform on board and AWS credentials to get access to your AWS account.
-### 1. Export AWS credentials and your default region (I worked in us-east-1 region)
-```
-export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
-export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx
-export AWS_DEFAULT_REGION=us-east-1
-```
-### 2. Clone repository and start the Terraform script
+
+### 1. Clone repository and start the Terraform script
 ```
 git clone https://github.com/Kasper886/WaveProject.git
 ```
@@ -71,7 +66,14 @@ bash/eksctl.sh
 ```
 bash/kubectl.sh
 ```
-So, you can laounch EKS cluster now:
+
+### 2. So, you can laounch EKS cluster now:
+Export AWS credentials and your default region (I worked in us-east-1 region)
+```
+export AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxx
+export AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxx
+export AWS_DEFAULT_REGION=us-east-1
+```
 ```
 terraform init
 ```
@@ -82,6 +84,7 @@ terraform plan
 terraform apply -auto-approve
 ```
 
+### 3. Work with EKS cluster
 When the cluster is created you can run the following command to "login" to your EKS cluster:
 
 aws eks update-kubeconfig --name clusterName --region AWS region
@@ -100,7 +103,7 @@ eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
 eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
 ```
 
-## Finally delete EKS cluster
+### 4. Finally delete EKS cluster
 If you have done and don't want to deploy the application - delete EKS cluster. If not, go to [the next section](https://github.com/Kasper886/WaveProject/tree/master/App)
 ```
 terraform destroy -auto-approve
