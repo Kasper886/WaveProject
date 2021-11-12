@@ -42,6 +42,11 @@ git clone https://github.com/Kasper886/WaveProject.git
 cd WaveProject/EKS-Cluster/
 ```
 Install Terraform if you don't have it
+If your user is not a root user, ask your admin to add user to sudoers
+```
+sudo visudo
+```
+Then install Terraform
 ```
 chmod 744 bash/terraform.sh
 bash/terraform.sh
