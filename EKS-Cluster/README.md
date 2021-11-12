@@ -39,7 +39,7 @@ export AWS_DEFAULT_REGION=us-east-1
 git clone https://github.com/Kasper886/WaveProject.git
 ```
 ```
-cd WaveProject/EKS-cluster/
+cd WaveProject/EKS-Cluster/
 ```
 Install Terraform if you don't have it
 ```
