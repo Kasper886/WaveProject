@@ -9,7 +9,7 @@ Thie repo demonstrates how to create AWS EKS cluster by means of IaaC Terraform 
 2. 2 public subnets in 2 availability zones A and B
 3. 2 private subnets in 2 availability zones A and B
 4. Internet gateway for Future use
-5. NAT gateway to get access for private instances for Future use
+5. 2 NAT gateways in 2 availability zones A and B to get access for private instances for Future use
 6. Route Tables
 7. Route Table Association
 
