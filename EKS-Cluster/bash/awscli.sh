@@ -1,9 +1,10 @@
-#-----------------------#
-# Install AWS CLI       #
-#                       #
-# Created: 08.11.2021   # 
-# Owner: Alex Largman   # 
-#-----------------------#
+#-------------------------#
+# Install AWS CLI         #
+#                         #
+# Created: 08.11.2021     # 
+# Owner: Alex Largman     #
+# Email: alex@largman.pro #
+#-------------------------#
 
 
 #!/bin/bash
