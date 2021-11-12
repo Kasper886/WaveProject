@@ -43,7 +43,7 @@ sudo visudo
 ```
 Then install Terraform
 ```
-chmod 744 bash/terraform.sh
+chmod +x bash/terraform.sh
 bash/terraform.sh
 ```
 If you want to scale your node group, you need:
@@ -53,9 +53,9 @@ If you want to scale your node group, you need:
 
 To install the tools above, follow the next steps:
 ```
-chmod 744 bash/awscli.sh
-chmod 744 bash/eksctl.sh
-chmod 744 bash/kubectl.sh
+chmod +x bash/awscli.sh
+chmod +x bash/eksctl.sh
+chmod +x bash/kubectl.sh
 ```
 ```
 bash/awscli.sh
