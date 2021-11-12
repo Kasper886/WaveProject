@@ -51,15 +51,6 @@ Then install Terraform
 chmod 744 bash/terraform.sh
 bash/terraform.sh
 ```
-```
-terraform init
-```
-```
-terraform plan
-```
-```
-terraform apply -auto-approve
-```
 If you want to scale your node group, you need:
 1. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 2. [EKSCTL](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
@@ -80,8 +71,18 @@ bash/eks.sh
 ```
 bash/kubectl.sh
 ```
+So, you can laounch EKS cluster now:
+```
+terraform init
+```
+```
+terraform plan
+```
+```
+terraform apply -auto-approve
+```
 
-Then run the following command to "login" to your EKS cluster:
+When the cluster is created you can run the following command to "login" to your EKS cluster:
 
 aws eks update-kubeconfig --name clusterName --region AWS region
 
