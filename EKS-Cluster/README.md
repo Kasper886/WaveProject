@@ -43,7 +43,7 @@ cd WaveProject/EKS-Cluster/
 ```
 Install Terraform if you don't have it
 ```
-chmod 744 terraform.sh
+chmod 744 bash/terraform.sh
 bash/terraform.sh
 ```
 ```
