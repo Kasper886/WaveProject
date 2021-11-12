@@ -63,10 +63,10 @@ chmod 744 bash/eksctl.sh
 chmod 744 bash/kubectl.sh
 ```
 ```
-bash/aws.sh
+bash/awscli.sh
 ```
 ```
-bash/eks.sh
+bash/eksctl.sh
 ```
 ```
 bash/kubectl.sh
