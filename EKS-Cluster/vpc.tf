@@ -73,44 +73,39 @@ resource "aws_route_table_association" "public" {
 
 # Allocate 2 Elastic IPs for 2 NGW
 resource "aws_eip" "wave-eip" {
-  #count      = var.az_count
+  count      = var.az_count
   vpc        = true
   depends_on = [aws_internet_gateway.wave-igw]
   
   tags = {
-    #Name     = "Wave-EIP-${count.index+1}"
-    Name     = "Wave-EIP"
+    Name     = "Wave-EIP-${count.index+1}"
   }
 }
 
 # Ceate 2 Nat GW
 resource "aws_nat_gateway" "wave-natgw" {
-  #count         = var.az_count
+  count         = var.az_count
   subnet_id     = aws_subnet.public.0.id
-  #allocation_id = element(aws_eip.wave-eip.*.id, count.index)
-  allocation_id = aws_eip.wave-eip.id
-
+  allocation_id = element(aws_eip.wave-eip.*.id, count.index)
+  
   tags = {
-    #Name        = "Wave-NGW-${count.index+1}"
-    Name        = "Wave-NGW"
+    Name        = "Wave-NGW-${count.index+1}"
   }
 }
 
 
 # Create a new route table for the private subnets, make it route non-local traffic through the NAT gateway to the internet
 resource "aws_route_table" "private" {
-  #count  = var.az_count
+  count  = var.az_count
   vpc_id = aws_vpc.wave-vpc.id
 
   route {
     cidr_block     = "0.0.0.0/0"
-    #nat_gateway_id = element(aws_nat_gateway.wave-natgw.*.id, count.index)
-    nat_gateway_id = aws_nat_gateway.wave-natgw.id
+    nat_gateway_id = element(aws_nat_gateway.wave-natgw.*.id, count.index)
   }
 
   tags = {
-     #Name          = "WaveNGW-${count.index+1}"
-     Name          = "WaveNGW-RTBL"
+     Name          = "WaveNGW-${count.index+1}"
   }
 }
 
@@ -118,7 +113,5 @@ resource "aws_route_table" "private" {
 resource "aws_route_table_association" "private" {
   count          = var.az_count
   subnet_id      = element(aws_subnet.private.*.id, count.index)
-  #route_table_id = element(aws_route_table.private.*.id, count.index)
-  route_table_id = aws_route_table.private.id
-  #route_table_id = aws_vpc.wave-vpc.main_route_table_id
+  route_table_id = element(aws_route_table.private.*.id, count.index)
 }
