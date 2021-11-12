@@ -100,7 +100,7 @@ eksctl scale nodegroup --cluster=clusterName --nodes=4 --name=nodegroupName
 
   Where clusterName is name of your cluster (wave-eks), nodegroupName - name of your group name (nodes-01)
 ```
-eksctl scale nodegroup --cluster=wave-eks --nodes=4 --name=nodes-01
+eksctl scale nodegroup --cluster=eks --nodes=4 --name=nodes-01
 ```
 
 ### 4. Finally delete EKS cluster
