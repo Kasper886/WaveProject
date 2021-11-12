@@ -67,18 +67,18 @@ If you want to scale your node group, you need:
 
 To install the tools above, follow the next steps:
 ```
-chmod 744 /bash/awscli.sh
-chmod 744 /bash/eksctl.sh
-chmod 744 /bash/kubectl.sh
+chmod 744 bash/awscli.sh
+chmod 744 bash/eksctl.sh
+chmod 744 bash/kubectl.sh
 ```
 ```
-/bash/aws.sh
+bash/aws.sh
 ```
 ```
-/bash/eks.sh
+bash/eks.sh
 ```
 ```
-/bash/kubectl.sh
+bash/kubectl.sh
 ```
 
 Then run the following command to "login" to your EKS cluster:
