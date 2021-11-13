@@ -22,4 +22,39 @@ node {
            docker.build("${IMAGE}:v${VERSION}").push()
         }
     }
+    
+    stage ('K8S Deploy') {
+       
+        sh "kubectl apply -f redis-master-controller.yaml"
+        sh "kubectl apply -f redis-master-service.yaml"
+        sh "kubectl apply -f redis-slave-controller.yaml"
+        sh "kubectl apply -f redis-slave-service.yaml"
+        sh "kubectl apply -f guestbook-controller.yaml"
+        sh "kubectl apply -f guestbook-service.yaml"
+        
+        /* There was a problem with the plugins. Here is deploy without shell
+        kubernetesDeploy(
+            configs: 'redis-master-controller.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
+        )
+        
+        kubernetesDeploy(
+            configs: 'redis-master-service.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
+        )
+        
+        kubernetesDeploy(
+            configs: 'redis-slave-controller.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
+        )
+        
+        kubernetesDeploy(
+        configs: 'redis-slave-service.yaml',
+        kubeconfigId: 'K8S',
+        enableConfigSubstitution: true
+        )*/
+    }
 }
