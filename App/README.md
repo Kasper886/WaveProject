@@ -43,6 +43,7 @@ and
 cat /home/wave/.kube/config
 ```
 Copy result of this command and return to Jenkins credentials section, then create Kubernetes credentials and choose Kubeconfig Enter directly
+
 ![EKS-cred](https://user-images.githubusercontent.com/51818001/141674297-d0678fe6-1622-4044-9cfb-e68cb84dd45a.png)
 
 
