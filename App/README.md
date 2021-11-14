@@ -46,5 +46,10 @@ Copy result of this command and return to Jenkins credentials section, then crea
 
 ![EKS-cred](https://user-images.githubusercontent.com/51818001/141674297-d0678fe6-1622-4044-9cfb-e68cb84dd45a.png)
 
+4. Make sure you create Maven3 variable under Global tool configuration.
+
+![maven3](https://user-images.githubusercontent.com/51818001/141674371-a22998f4-0c63-4b0e-b928-9e581c30f14f.png)
+
+
 
 
