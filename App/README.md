@@ -26,6 +26,6 @@ Also you need the next plugins:
 - Kubernetes Continuous Deploy
 - Docker
 - Docker Pipeline
-<br/>
+
 ![plugins](https://user-images.githubusercontent.com/51818001/141673704-99c9e449-64b1-41a7-9b25-d4268fb8960f.png)
 
