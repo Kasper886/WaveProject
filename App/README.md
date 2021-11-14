@@ -25,7 +25,9 @@ Also you need the next plugins:
 - CloudBees AWS credentials
 - Kubernetes Continuous Deploy
 - Docker
-- Docker Pipeline
+- Docker Pipeline!
+
+![plaugins](https://user-images.githubusercontent.com/51818001/141673986-8f615e47-3bf5-4748-9466-5f669bf4e481.png)
 
 ![plugins](https://user-images.githubusercontent.com/51818001/141673704-99c9e449-64b1-41a7-9b25-d4268fb8960f.png)
 
