@@ -17,7 +17,7 @@ terraform plan
 ```
 terraform apply -auto-approve
 ```
-Id you created EKS cluster from previos section you already have Terraform and applied AWS credentials before.
+If you created EKS cluster from previos section you already have Terraform and applied AWS credentials before.
 
 2. Install Jenkins and necessary plugins
 You can read how install Jenkins from the official documentation [here](https://www.jenkins.io/doc/book/installing/linux/).
@@ -26,5 +26,6 @@ Also you need the next plugins:
 - Kubernetes Continuous Deploy
 - Docker
 - Docker Pipeline
+<br/>
 ![plugins](https://user-images.githubusercontent.com/51818001/141673704-99c9e449-64b1-41a7-9b25-d4268fb8960f.png)
 
