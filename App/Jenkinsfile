@@ -52,9 +52,21 @@ node {
         )
         
         kubernetesDeploy(
-        configs: 'redis-slave-service.yaml',
-        kubeconfigId: 'K8S',
-        enableConfigSubstitution: true
+            configs: 'redis-slave-service.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
+        )
+        
+        kubernetesDeploy(
+            configs: 'guestbook-controller.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
+        )
+        
+        kubernetesDeploy(
+            configs: 'guestbook-service.yaml',
+            kubeconfigId: 'K8S',
+            enableConfigSubstitution: true
         )*/
     }
 }
