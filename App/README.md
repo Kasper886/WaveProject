@@ -33,5 +33,13 @@ Also you need the next plugins:
 Go to Jenkins -> Manage Jenkins -> Global credentials section and add AWS credentials with ID ecr
 
 ![ECR-cred](https://user-images.githubusercontent.com/51818001/141673986-8f615e47-3bf5-4748-9466-5f669bf4e481.png)
- 
+
+Then input the following command to get EKS config if you didn't it before in previous section:
+```
+aws eks update-kubeconfig --name eks --region us-east-1
+```
+and
+```
+cat /home/wave/.kube/config
+```
 
