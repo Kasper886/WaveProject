@@ -56,6 +56,6 @@ Copy result of this command and return to Jenkins credentials section, then crea
 
 ## Result
 
-![screen1](https://user-images.githubusercontent.com/51818001/141675855-e5839687-ce0c-4357-a8a4-8115ca05cfda.png)
+![screen1](https://user-images.githubusercontent.com/51818001/141676063-6bab5a63-558c-4968-9440-7f3072184b88.png)
 
 ![ECR-image](https://user-images.githubusercontent.com/51818001/141675918-eabf9fec-90fa-4225-a829-bb447a116e6b.png)
