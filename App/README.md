@@ -50,6 +50,14 @@ Copy result of this command and return to Jenkins credentials section, then crea
 
 ![maven3](https://user-images.githubusercontent.com/51818001/141674371-a22998f4-0c63-4b0e-b928-9e581c30f14f.png)
 
+5. Create new pipeline in Jenkins and copy Jenkinsfile there
 
+6. Build your pipeline
+
+## Result
+
+![screen1](https://user-images.githubusercontent.com/51818001/141675855-e5839687-ce0c-4357-a8a4-8115ca05cfda.png)
+
+![ECR-image](https://user-images.githubusercontent.com/51818001/141675918-eabf9fec-90fa-4225-a829-bb447a116e6b.png)
 
 
