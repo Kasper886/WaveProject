@@ -46,6 +46,11 @@ Copy result of this command and return to Jenkins credentials section, then crea
 
 ![EKS-cred](https://user-images.githubusercontent.com/51818001/141674297-d0678fe6-1622-4044-9cfb-e68cb84dd45a.png)
 
+Also, run to get access for Jenkins to your EKS cluster
+```
+kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
+```
+
 4. Make sure you create Maven3 variable under Global tool configuration.
 
 ![maven3](https://user-images.githubusercontent.com/51818001/141674371-a22998f4-0c63-4b0e-b928-9e581c30f14f.png)
@@ -53,6 +58,9 @@ Copy result of this command and return to Jenkins credentials section, then crea
 5. Create new pipeline in Jenkins and copy Jenkinsfile there.
 
 6. Build your pipeline.
+
+## BUG
+If you get an error in EKS deployment stage in your pipeline, you should downgrade your Kubernetes-CD plugin to 1.0.0 version.
 
 ## Result
 
