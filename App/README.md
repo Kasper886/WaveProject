@@ -59,6 +59,27 @@ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster
 
 6. Build your pipeline.
 
+7. To delete the services and deployments without cluster destroying run:
+```
+git clone https://github.com/Kasper886/guest-book.git
+cd guest-book
+```
+```
+kubectl delete -f redis-master-controller.yaml
+kubectl delete -f redis-slave-controller.yaml
+kubectl delete -f guestbook-controller.yaml
+```
+8. To destroy EKS cluster
+Destroy ECR repo
+```
+terraform destroy -auto-approve
+```
+Destroy EKS cluster
+```
+cd ..
+terraform destroy -auto-approve
+```
+
 ## BUG
 If you get an error in EKS deployment stage in your pipeline, you should downgrade your Kubernetes-CD plugin to 1.0.0 version.
 
