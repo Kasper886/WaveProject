@@ -59,7 +59,16 @@ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster
 
 6. Build your pipeline.
 
-7. To delete the services and deployments without cluster destroying run:
+7. Run the following command to get access from your browser:
+```
+kubectl get svc
+```
+Then copy the dns name of the load malancer. It should be something like this:
+a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com
+and add port 3000
+a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com:3000
+
+8. To delete the services and deployments without cluster destroying run:
 ```
 git clone https://github.com/Kasper886/guest-book.git
 cd guest-book
