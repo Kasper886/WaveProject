@@ -63,7 +63,7 @@ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster
 ```
 kubectl get svc
 ```
-Then copy the dns name of the load malancer. It should be something like this:
+Then copy the dns name of the load balancer. It should be something like this:
 a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com
 and add port 3000
 a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com:3000
