@@ -23,7 +23,7 @@ If you created EKS cluster from previous section you already have Terraform and 
 You can read how install Jenkins from the official documentation [here](https://www.jenkins.io/doc/book/installing/linux/).
 Also you need the next plugins:
 - CloudBees AWS credentials
-- Kubernetes Continuous Deploy
+- Kubernetes Continuous Deploy (v.1.0.0) you can download [this file](https://updates.jenkins.io/download/plugins/kubernetes-cd/1.0.0/kubernetes-cd.hpi) and upload it in advanced settings in Jenkins plugin management section
 - Docker
 - Docker Pipeline!
 
