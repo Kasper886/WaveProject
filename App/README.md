@@ -44,7 +44,7 @@ Also you need the next plugins:
 - Docker Pipeline;
 - Amazon ECR plugin.
 
-![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)
+![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)<br/>
 ![plugins2](https://user-images.githubusercontent.com/51818001/142755919-76b96510-3481-4fc1-87c1-61e1d732929c.png)
 
 4. Credentials settings.
