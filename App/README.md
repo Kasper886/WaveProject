@@ -19,7 +19,7 @@ terraform apply -auto-approve
 ```
 If you created EKS cluster from previous section you already have Terraform and applied AWS credentials before.
 
-2. Install Docker
+2. Install Docker<br/>
 If you don't have Docker, you can install it:
 ```
 chmod +x docker.sh
