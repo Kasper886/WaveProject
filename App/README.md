@@ -49,8 +49,7 @@ Also you need the next plugins:
 - Docker Pipeline;
 - Amazon ECR plugin.
 
-![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)<br/>
-![plugins2](https://user-images.githubusercontent.com/51818001/142755919-76b96510-3481-4fc1-87c1-61e1d732929c.png)
+![plugins3](https://user-images.githubusercontent.com/51818001/142757989-6ffa7c12-98c3-4562-b3fa-962acd39ece6.png)
 
 5. Credentials settings.
 Go to Jenkins -> Manage Jenkins -> Global credentials section and add AWS credentials with ID ecr
