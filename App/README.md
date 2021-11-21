@@ -41,9 +41,11 @@ Also you need the next plugins:
 - CloudBees AWS credentials;
 - Kubernetes Continuous Deploy (v.1.0.0), you can download [this file](https://updates.jenkins.io/download/plugins/kubernetes-cd/1.0.0/kubernetes-cd.hpi) and upload it in advanced settings in Jenkins plugin management section;
 - Docker;
-- Docker Pipeline.
+- Docker Pipeline;
+- Amazon ECR plugin.
 
 ![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)
+![plugins2](https://user-images.githubusercontent.com/51818001/142755863-972bed09-4d56-4a96-865e-a7948c47e8b4.png)
 
 4. Credentials settings.
 Go to Jenkins -> Manage Jenkins -> Global credentials section and add AWS credentials with ID ecr
