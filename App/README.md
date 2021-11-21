@@ -62,6 +62,8 @@ Copy result of this command and return to Jenkins credentials section, then crea
 
 ![EKS-cred](https://user-images.githubusercontent.com/51818001/141674297-d0678fe6-1622-4044-9cfb-e68cb84dd45a.png)
 
+And input ID K8S (IMPORTANT! Field id K8S should contain all upper-case)
+
 Also, run to get access for Jenkins to your EKS cluster
 ```
 kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
