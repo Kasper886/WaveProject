@@ -75,7 +75,7 @@ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster
 
 6. Create new pipeline in Jenkins and copy Jenkinsfile there.
 
-. Build your pipeline.
+Build your pipeline.
 
 7. Run the following command to get access from your browser:
 ```
