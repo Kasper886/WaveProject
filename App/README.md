@@ -103,6 +103,9 @@ kubectl delete -f redis-master-controller.yaml
 kubectl delete -f redis-slave-controller.yaml
 kubectl delete -f guestbook-controller.yaml
 ```
+```
+kubectl delete service guestbook redis-master redis-slave
+```
 10. To destroy EKS cluster
 Destroy ECR repo
 ```
