@@ -34,8 +34,8 @@ su - ${USER}
 You can read how install [Jenkins on Linux](https://www.jenkins.io/doc/book/installing/linux/).
 Or you can start Jenkins with Docker container:
 ```
-mkdir jenkins
-docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v ~/jenkins:/var/jenkins_home jenkins/jenkins:lts-jdk11
+mkdir /homw/${USER}/jenkins
+docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /homw/${USER}/jenkins:/var/jenkins_home jenkins/jenkins:lts-jdk11
 ```
 Also you need the next plugins:
 - CloudBees AWS credentials;
