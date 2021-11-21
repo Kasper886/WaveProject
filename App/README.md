@@ -19,7 +19,14 @@ terraform apply -auto-approve
 ```
 If you created EKS cluster from previous section you already have Terraform and applied AWS credentials before.
 
-2. Install Jenkins and necessary plugins
+2. Install Docker
+If you don't have Docker, you can install it:
+```
+chmod +x docker.sh
+./docker.sh
+```
+
+3. Install Jenkins and necessary plugins
 You can read how install [Jenkins on Linux](https://www.jenkins.io/doc/book/installing/linux/).
 Or you can start Jenkins with Docker container:
 ```
@@ -34,7 +41,7 @@ Also you need the next plugins:
 
 ![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)
 
-3. Credentials settings.
+4. Credentials settings.
 Go to Jenkins -> Manage Jenkins -> Global credentials section and add AWS credentials with ID ecr
 
 ![ECR-cred](https://user-images.githubusercontent.com/51818001/141673986-8f615e47-3bf5-4748-9466-5f669bf4e481.png)
@@ -56,13 +63,13 @@ Also, run to get access for Jenkins to your EKS cluster
 kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
 ```
 
-4. Make sure you create Maven3 variable under Global tool configuration.
+5. Make sure you create Maven3 variable under Global tool configuration.
 
 ![maven3](https://user-images.githubusercontent.com/51818001/141674371-a22998f4-0c63-4b0e-b928-9e581c30f14f.png)
 
-5. Create new pipeline in Jenkins and copy Jenkinsfile there.
+6. Create new pipeline in Jenkins and copy Jenkinsfile there.
 
-6. Build your pipeline.
+. Build your pipeline.
 
 7. Run the following command to get access from your browser:
 ```
@@ -83,7 +90,7 @@ kubectl delete -f redis-master-controller.yaml
 kubectl delete -f redis-slave-controller.yaml
 kubectl delete -f guestbook-controller.yaml
 ```
-8. To destroy EKS cluster
+9. To destroy EKS cluster
 Destroy ECR repo
 ```
 terraform destroy -auto-approve
@@ -93,9 +100,6 @@ Destroy EKS cluster
 cd ..
 terraform destroy -auto-approve
 ```
-
-## BUG
-If you get an error in EKS deployment stage in your pipeline, you should downgrade your Kubernetes-CD plugin to 1.0.0 version.
 
 ## Result
 
