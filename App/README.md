@@ -19,7 +19,12 @@ terraform apply -auto-approve
 ```
 If you created EKS cluster from previous section you already have Terraform and applied AWS credentials before.
 
-2. Install Docker if you don't have it:
+2. Install Java
+```
+sudo apt -y install openjdk-11-jdk
+```
+
+3. Install Docker if you don't have it:
 ```
 chmod +x docker.sh
 ./docker.sh
@@ -30,7 +35,7 @@ sudo usermod -aG docker ${USER}
 su - ${USER}
 ```
 
-3. Install Jenkins and necessary plugins
+4. Install Jenkins and necessary plugins
 You can read how install [Jenkins on Linux](https://www.jenkins.io/doc/book/installing/linux/).
 Or you can start Jenkins with Docker container:
 ```
@@ -47,7 +52,7 @@ Also you need the next plugins:
 ![plugins](https://user-images.githubusercontent.com/51818001/141674103-1117057c-8c71-4de4-98d0-18a63c5ad179.png)<br/>
 ![plugins2](https://user-images.githubusercontent.com/51818001/142755919-76b96510-3481-4fc1-87c1-61e1d732929c.png)
 
-4. Credentials settings.
+5. Credentials settings.
 Go to Jenkins -> Manage Jenkins -> Global credentials section and add AWS credentials with ID ecr
 
 ![ECR-cred](https://user-images.githubusercontent.com/51818001/141673986-8f615e47-3bf5-4748-9466-5f669bf4e481.png)
@@ -71,15 +76,15 @@ Also, run to get access for Jenkins to your EKS cluster
 kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
 ```
 
-5. Make sure you create Maven3 variable under Global tool configuration.
+6. Make sure you create Maven3 variable under Global tool configuration.
 
 ![maven3](https://user-images.githubusercontent.com/51818001/141674371-a22998f4-0c63-4b0e-b928-9e581c30f14f.png)
 
-6. Create new pipeline in Jenkins and copy Jenkinsfile there.
+7. Create new pipeline in Jenkins and copy Jenkinsfile there.
 
 Build your pipeline.
 
-7. Run the following command to get access from your browser:
+8. Run the following command to get access from your browser:
 ```
 kubectl get svc
 ```
@@ -88,7 +93,7 @@ a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com
 and add port 3000
 a50fec56374e843a6afbf0f96488e800-1553267577.us-east-1.elb.amazonaws.com:3000
 
-8. To delete the services and deployments without cluster destroying run:
+9. To delete the services and deployments without cluster destroying run:
 ```
 git clone https://github.com/Kasper886/guest-book.git
 cd guest-book
@@ -98,7 +103,7 @@ kubectl delete -f redis-master-controller.yaml
 kubectl delete -f redis-slave-controller.yaml
 kubectl delete -f guestbook-controller.yaml
 ```
-9. To destroy EKS cluster
+10. To destroy EKS cluster
 Destroy ECR repo
 ```
 terraform destroy -auto-approve
