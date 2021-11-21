@@ -24,13 +24,18 @@ If you created EKS cluster from previous section you already have Terraform and 
 chmod +x docker.sh
 ./docker.sh
 ```
+To use Docker without sudo, run:
+```
+sudo usermod -aG docker ${USER}
+su - ${USER}
+```
 
 3. Install Jenkins and necessary plugins
 You can read how install [Jenkins on Linux](https://www.jenkins.io/doc/book/installing/linux/).
 Or you can start Jenkins with Docker container:
 ```
 mkdir jenkins
-sudo docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v ~/jenkins:/var/jenkins_home jenkins/jenkins:lts-jdk11
+docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v ~/jenkins:/var/jenkins_home jenkins/jenkins:lts-jdk11
 ```
 Also you need the next plugins:
 - CloudBees AWS credentials;
