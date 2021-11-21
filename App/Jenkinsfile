@@ -1,3 +1,4 @@
+/*
 #-------------------------#
 # JenkinsFile             #
 #                         #
@@ -5,9 +6,10 @@
 # Owner: Alex Largman     #
 # Email: alex@largman.pro #
 #-------------------------#
+*/
 node {
     
-    def commit_id
+    //def commit_id
     def ECRURL  = 'https://122734987158.dkr.ecr.us-east-1.amazonaws.com/'
     def ECRCRED = 'ecr:us-east-1:ecr'
     def VERSION = '${BUILD_NUMBER}'
