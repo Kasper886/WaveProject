@@ -89,7 +89,7 @@ When the cluster is created you can run the following command to "login" to your
 
 aws eks update-kubeconfig --name clusterName --region AWS region
 
-  Where clusterName is name of your cluster (eks), AWS region - region of AWS (us-east-1)
+  Where the clusterName is the name of your cluster (eks), AWS region is the region of AWS (us-east-1)
 ```
 aws eks update-kubeconfig --name eks --region us-east-1
 ```
